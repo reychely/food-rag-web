@@ -65,15 +65,15 @@ Final Answer + Self-Check
 ### 2️⃣ Indexing (ChromaDB)
 - Dense embeddings (`sentence-transformers`)
 - Persistent local vector store
-###    Query Understanding & Improvement
+#### 🔹 Query Understanding & Improvement
 
 Before retrieval, the user query is normalized and expanded to improve recall and robustness.
 
-#### 🔹 Spell Correction
+##### 🔹 Spell Correction
 User queries may contain spelling errors or informal wording.  
 A lightweight spell-correction step is applied to reduce vocabulary mismatch between the query and indexed documents.
 
-#### 🔹 Synonym Expansion (MeSH-based Vocabulary)
+##### 🔹 Synonym Expansion (MeSH-based Vocabulary)
 To handle terminology variation in the food and nutrition domain, FoodRAG supports **query expansion using a controlled vocabulary**.
 
 A domain-specific synonym list inspired by **MeSH (Medical Subject Headings)** is used to map common terms to their related concepts.
@@ -98,11 +98,29 @@ Improves precision by re-scoring top-K retrieved chunks.
 ---
 
 
+### Models Used
+
+**llama3.2:3b (via Ollama)**
+Used for answer generation and verification.
+The model generates a draft answer from retrieved documents and then performs a second verification pass to remove unsupported claims and enforce citations.
+
+**Sentence-Transformer Embedding Model (e.g. all-MiniLM-L6-v2)**
+Used for semantic retrieval.
+Documents and user queries are embedded into vectors to enable similarity search, which is combined with BM25 for hybrid retrieval.
+
+---
+### Storage & Vocabulary
+
+**ChromaDB**
+Used as the vector database to store document embeddings and enable fast semantic retrieval during query time.
+
+**Medical / Nutrition Vocabulary (MeSH-style synonyms)**
+A curated synonym vocabulary is used during query expansion to improve recall for nutrition and health-related terms (e.g., medical terminology, nutrient names, abbreviations).
 
 
 
 
-
+---
 
 ## 🚀 How to Run the Project
 
