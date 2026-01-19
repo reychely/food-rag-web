@@ -1,4 +1,5 @@
 # 🥗 FoodRAG  
+### Reychel Yakubov 209807130 and Maor Ben Yehuda 208742890
 ### Retrieval-Augmented Generation for Food, Diet & Nutrition
 
 ### Video Link : https://drive.google.com/file/d/19HIe8atJbjsTxQ8-P4ujCdqC4-iFViAR/view?usp=sharing
