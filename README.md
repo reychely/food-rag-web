@@ -1,6 +1,8 @@
 # 🥗 FoodRAG  
 ### Retrieval-Augmented Generation for Food, Diet & Nutrition
 
+### Video Link : https://drive.google.com/file/d/19HIe8atJbjsTxQ8-P4ujCdqC4-iFViAR/view?usp=sharing
+
 > **FoodRAG** is a fully local Retrieval-Augmented Generation (RAG) system designed to answer food, diet, and nutrition questions by grounding every response in verified textual sources.
 
 The system combines **hybrid retrieval (BM25 + embeddings)**, **cross-encoder re-ranking**, and a **local LLM (via Ollama)** to produce factual, explainable answers without relying on external APIs.
